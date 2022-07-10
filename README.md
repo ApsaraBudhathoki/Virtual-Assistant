@@ -9,3 +9,4 @@ Some of them are:
 - Basic Conversation like Hi, How are you?
 - Searching information in google.
 
+<p> It uses JavaScript Speech Recognition object for the manipulation of voice command </p>
