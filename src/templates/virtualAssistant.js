@@ -96,7 +96,7 @@ function speakThis(message){
         speech.text = finalAns;
     }
     else if(message.includes("my name")){
-        const finalAns = "Your name is Apsara";
+        const finalAns = "Your good name is Apsara Budhathoki";
         speech.text = finalAns;
     }
     else if (message.includes('open google')) {
