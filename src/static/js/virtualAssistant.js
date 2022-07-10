@@ -40,16 +40,16 @@ function wishMe(){
     var day = new Date();
     var hour = day.getHours();
     if(hour >=0 && hour <12){
-        speak("Good Morning sir");
+        speak("Good Morning mam");
     }
     else if(hour ==12){
-        speak("Good noon sir");
+        speak("Good noon mam");
     }
     else if(hour >=12 && hour <=17){
-        speak("Good Afternoon sir");
+        speak("Good Afternoon mam");
     }
     else {
-        speak("Good Evening sir");
+        speak("Good Evening mam");
     }
 }
 
