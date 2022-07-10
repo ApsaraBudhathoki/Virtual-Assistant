@@ -1,14 +1,14 @@
 //  Welcome, to the basic javaScript Virtual Assistant
-// This is created by Nishant Banjade 
+// This is created by Apsara Budhathoki
 const btn_click = document.querySelector('.SpeakToMe');
 const content = document.querySelector('.content');
 
 // Greetings
 const greet_me = [
-    "Hello Nishant",
+    "Hello Apsara",
     "Hello Friend",
-    "Hi man",
-    "Hi bro",
+    "Hi",
+    "Hello dear",
     "Hi Hommie"
 ];
 
