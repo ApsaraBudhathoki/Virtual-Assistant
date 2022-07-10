@@ -6,7 +6,7 @@ const answer = document.querySelector('.answer');
 
 // Greetings
 const greet_me = [
-    "Hello Nishant",
+    "Hello Apsara",
     "Hello Friend",
     "Hi man",
     "Hi bro",
