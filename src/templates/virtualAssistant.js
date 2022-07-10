@@ -8,8 +8,8 @@ const answer = document.querySelector('.answer');
 const greet_me = [
     "Hello Apsara",
     "Hello Friend",
-    "Hi man",
-    "Hi bro",
+    "Hi honey",
+    "Hi mam",
     "Hi Hommie"
 ];
 
@@ -41,16 +41,16 @@ function wishMe(){
     var day = new Date();
     var hour = day.getHours();
     if(hour >=0 && hour <12){
-        speak("Good Morning sir");
+        speak("Good Morning ");
     }
     else if(hour ==12){
-        speak("Good noon sir");
+        speak("Good noon ");
     }
     else if(hour >=12 && hour <=17){
-        speak("Good Afternoon sir");
+        speak("Good Afternoon ");
     }
     else {
-        speak("Good Evening sir");
+        speak("Good Evening ");
     }
 }
 
