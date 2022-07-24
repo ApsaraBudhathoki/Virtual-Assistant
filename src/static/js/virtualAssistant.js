@@ -1,14 +1,14 @@
 //  Welcome, to the basic javaScript Virtual Assistant
-// This is created by Nishant Banjade 
+// This is created by Apsara Budhathoki 
 const btn_click = document.querySelector('.SpeakToMe');
 const content = document.querySelector('.content');
 
 // Greetings
 const greet_me = [
-    "Hello Nishant",
+    "Hello Apsara",
     "Hello Friend",
-    "Hi man",
-    "Hi bro",
+    "Hi mam",
+    "Hello ",
     "Hi Hommie"
 ];
 
@@ -40,16 +40,16 @@ function wishMe(){
     var day = new Date();
     var hour = day.getHours();
     if(hour >=0 && hour <12){
-        speak("Good Morning sir");
+        speak("Good Morning mam");
     }
     else if(hour ==12){
-        speak("Good noon sir");
+        speak("Good noon mam");
     }
     else if(hour >=12 && hour <=17){
-        speak("Good Afternoon sir");
+        speak("Good Afternoon mam");
     }
     else {
-        speak("Good Evening sir");
+        speak("Good Evening mam");
     }
 }
 
@@ -65,3 +65,69 @@ btn_click.addEventListener('click', () => {
 });
 
 
+
+function speakThis(message){
+    const speech = new SpeechSynthesisUtterance();
+
+    speech.text = "Sorry, I couldn't understand what you have said";
+
+    if(message.includes('hi') || message.includes('hello') || message.includes('hy') || message.includes('hii')){
+        const finalAns = greet_me[Math.floor(Math.random() * greet_me.length)];
+        speech.text = finalAns;
+    }
+    else if(message.includes('how are you') || message.includes('whats up')){
+        const finalAns = "I am fine, How are you";
+        speech.text = finalAns;
+    }
+    else if(message.includes('tell me the time') || message.includes('current time') || message.includes('time')){
+        const time = new Date().toLocaleString(undefined, {hour:"numeric", minute:"numeric"});
+        
+        const finalAns = time;
+        speech.text = finalAns;
+    }
+    else if(message.includes("today's date") || message.includes('tell me the date') || message.includes('date')){
+        const date = new Date().toLocaleString(undefined, {month:"short", day:"numeric"});
+        
+        const finalAns = date;
+        speech.text = finalAns;
+    }
+    else if(message.includes("your name") || message.includes("who are you")){
+        const finalAns = "I am Jarvis";
+        speech.text = finalAns;
+    }
+    else if(message.includes("my name")){
+        const finalAns = "Your name is Apsara";
+        speech.text = finalAns;
+    }
+    else if (message.includes('open google')) {
+        window.open(`http://google.com`, "_blank");
+        const finalAns = 'opening google';
+        speech.text = finalAns;
+    }
+
+    else if (message.includes('open instagram')) {
+        window.open(`http://instagram.com`, "_blank");
+        const finalAns = 'opening instagram';
+        speech.text = finalAns;
+    }
+
+    else if (message.includes('open youtube')) {
+        window.open(`http://youtube.com`, "_blank");
+        const finalAns = 'opening youtube';
+        speech.text = finalAns;
+    }
+    else if (message.includes('open facebook')) {
+        window.open(`http://facebook.com`, "_blank");
+        const finalAns = 'opening facebook';
+        speech.text = finalAns;
+    }
+    
+
+    
+    speech.volume = 1;
+    speech.rate = 1;
+    speech.pitch = 1;
+
+    window.speechSynthesis.speak(speech);
+    
+}
