@@ -10,7 +10,7 @@ const content = document.querySelector('.content');
 const greet_me = [
     "Hello Apsara",
     "Hello Friend",
-<<<<<<< HEAD
+
     "Hi mam",
     "Hello ",
 
